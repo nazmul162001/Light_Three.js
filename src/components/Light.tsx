@@ -40,6 +40,11 @@ const Light = () => {
     pointLight.position.set(1, -0.5, 1)
     scene.add(pointLight)
 
+    // Rect Area light *** Important ***
+    const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1)
+    rectAreaLight.position.set(-1.5, 0, 1.5)
+    rectAreaLight.lookAt(new THREE.Vector3())
+    scene.add(rectAreaLight)
     // Helper
 
     //Debug
