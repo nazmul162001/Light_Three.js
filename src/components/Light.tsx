@@ -58,7 +58,7 @@ const Light = () => {
     spotLight.position.set(0, 2, 3)
     scene.add(spotLight)
 
-    // Helper
+    // Light Helper
     const hemisphereLightHelper = new THREE.HemisphereLightHelper(
       hemisphereLight,
       0.2
@@ -79,6 +79,7 @@ const Light = () => {
 
     const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
     scene.add(rectAreaLightHelper)
+    
     //Debug
     gui.add(ambientLight, 'intensity').min(0).max(1).step(0.01)
     gui.add(directionalLight, 'intensity').min(0).max(1).step(0.01)
