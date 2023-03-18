@@ -45,6 +45,19 @@ const Light = () => {
     rectAreaLight.position.set(-1.5, 0, 1.5)
     rectAreaLight.lookAt(new THREE.Vector3())
     scene.add(rectAreaLight)
+
+    // Spot light *** Important ***
+    const spotLight = new THREE.SpotLight(
+      0x78ff00,
+      0.5,
+      7,
+      Math.PI * 0.1,
+      0.25,
+      1
+    ) // SpotLight(color, intensity, distance, angle, penumbra, decay)
+    spotLight.position.set(0, 2, 3)
+    scene.add(spotLight)
+
     // Helper
 
     //Debug
