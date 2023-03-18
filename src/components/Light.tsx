@@ -80,7 +80,13 @@ const Light = () => {
     const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight)
     scene.add(rectAreaLightHelper)
     //Debug
-
+    gui.add(ambientLight, 'intensity').min(0).max(1).step(0.01)
+    gui.add(directionalLight, 'intensity').min(0).max(1).step(0.01)
+    gui.add(hemisphereLight, 'intensity').min(0).max(1).step(0.01)
+    gui.add(pointLight, 'intensity').min(0).max(1).step(0.01)
+    gui.add(rectAreaLight, 'intensity').min(0).max(10).step(0.01)
+    gui.add(rectAreaLight, 'intensity').min(0).max(10).step(0.01)
+    gui.add(spotLight, 'intensity').min(0).max(1).step(0.01)
     /**
      * Objects
      */
